@@ -1,0 +1,26 @@
+//
+// Author: OSTON <ti@oston.io>
+// Name: Vue Base
+// Description: Code for Vue projects
+// File: index.scss
+// Location: @/pages/repositories/username
+//
+.repositories {
+	padding: {
+		top: rem(50);
+  }
+
+  header {
+    @include display(flex, flex-end, center);
+    @include height(60);
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      @include display(flex, flex-start, center);
+      @include height(25);
+    }
+  }
+} // -> repositories

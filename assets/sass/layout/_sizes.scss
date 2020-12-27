@@ -1,0 +1,26 @@
+//
+// Author: OSTON <ti@oston.io>
+// Name: Pomodoro
+// Description: Nuxt styles
+// File: display.scss
+// Location: @/assets/sass/layout
+//
+
+@mixin height($max) {
+	height: 100vh;
+	@if $max != 'screen' {
+		max-height: rem($max);
+	}
+}
+
+@mixin width($max) {
+	width: 100vw;
+	@if $max != 'screen' {
+		max-width: rem($max);
+	}
+}
+
+@mixin size($height, $width: $height) {
+	@include height($height);
+	@include width($width);
+}

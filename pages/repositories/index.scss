@@ -1,0 +1,53 @@
+//
+// Author: OSTON <ti@oston.io>
+// Name: Vue Base
+// Description: Code for Vue projects
+// File: index.scss
+// Location: @/pages/repositories
+//
+.users {
+	padding: {
+		top: rem(50);
+	}
+
+	input {
+		height: rem(50);
+		width: 100%;
+    @include display(block);
+    padding: {
+      left: rem(20);
+      right: rem(20);
+    };
+
+    font-size: rem(20);
+    color: var(--gray-600);
+	}
+
+	ul {
+		margin: {
+			top: rem(40);
+		}
+
+		li {
+			list-style: none;
+
+			a {
+				@include display(block);
+				height: rem(25);
+				width: 100%;
+
+				color: var(--gray-600);
+				text-decoration: none;
+				font-size: rem(16);
+
+				&:hover {
+					color: var(--indigo-600) !important;
+				}
+
+				&:visited {
+					color: var(--pink-600);
+				}
+			}
+		}
+	}
+} // -> users

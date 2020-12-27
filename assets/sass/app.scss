@@ -1,0 +1,14 @@
+/*
+// Author: OSTON <ti@oston.io>
+// Name: Pomodoro
+// Description: Nuxt styles
+// File: app.scss
+// Location: @/assets/sass
+*/
+
+@import "./core/settings",
+        "./core/colors",
+        "./core/mixins",
+        "./core/extends";
+
+@import "./layout/global";

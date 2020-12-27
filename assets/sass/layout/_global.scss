@@ -1,0 +1,46 @@
+//
+// Author: OSTON <ti@oston.io>
+// Name: Pomodoro
+// Description: Nuxt styles
+// File: global.scss
+// Location: @/assets/sass/layout
+//
+
+:root {
+	@each $name, $color in $colors {
+		--#{$name}: #{$color};
+	}
+} // -> root
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+} // -> all tags
+
+body {
+	max-width: 100vw;
+	width: 100%;
+	overflow-x: hidden;
+
+	@include font("Simplon");
+	// @include scrollbar('vertical', $orange, darken($orange, 15%), darken($light-orange, 15%), tomato);
+
+	* {
+		-webkit-overflow-scrolling: touch !important;
+	}
+}
+
+.container {
+  max-width: rem(1180);
+  width: 100vw;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+
+  padding: {
+    left: rem(30);
+    right: rem(30);
+  }
+}
