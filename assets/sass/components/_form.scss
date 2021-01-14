@@ -1,0 +1,49 @@
+//
+// Author: OSTON <ti@oston.io>
+// Name: Pomodoro
+// Description: Nuxt styles
+// File: form.scss
+// Location: @/assets/sass/components
+//
+
+
+%input {
+	@include display(block);
+	@include size(60, auto);
+
+  border: rem(1) solid color(white);
+  @include background(white);
+  outline: none !important;
+
+	padding: {
+    top: rem(12);
+		left: rem(12);
+		right: rem(12);
+  };
+  border-radius: rem(4);
+
+	font-size: rem(17);
+}
+
+.form {
+	&\:group {
+		position: relative;
+		margin: {
+			bottom: rem(12);
+		}
+
+		label {
+      position: absolute;
+      top: rem(8);
+      left: rem(12);
+
+      font-size: rem(12);
+      @include color(primary);
+		} // -> label
+
+		input,
+		select {
+			@extend %input;
+		} // -> input/select
+	} // -> group
+} // -> form

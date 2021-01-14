@@ -6,11 +6,11 @@
 // Location: @/assets/sass/layout
 //
 
-:root {
-	@each $name, $color in $colors {
-		--#{$name}: #{$color};
-	}
-} // -> root
+// :root {
+// 	@each $name, $color in $colors {
+// 		--#{$name}: #{$color};
+// 	}
+// } // -> root
 
 * {
 	margin: 0;
@@ -23,7 +23,7 @@ body {
 	width: 100%;
 	overflow-x: hidden;
 
-	@include font("Simplon");
+	@include font("Fira Sans");
 	// @include scrollbar('vertical', $orange, darken($orange, 15%), darken($light-orange, 15%), tomato);
 
 	* {

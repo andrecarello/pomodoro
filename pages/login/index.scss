@@ -1,0 +1,46 @@
+//
+// Author: OSTON <ti@oston.io>
+// Name: Vue Base
+// Description: Code for Vue projects
+// File: index.scss
+// Location: @/pages/login
+//
+.login {
+	@include display(flex, center, center);
+  @include size(screen);
+  @include background(primary);
+
+	&\:container {
+		max-width: rem(340);
+    width: 90vw;
+
+		padding: {
+			top: rem(30);
+			left: rem(20);
+			right: rem(20);
+			bottom: rem(30);
+		}
+	} // -> container
+
+	&\:title {
+		position: relative;
+		margin: {
+			bottom: rem(32);
+		}
+
+		@include color(white);
+    font-size: rem(50);
+    font-weight: 100;
+		text-transform: uppercase;
+
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: rem(-25);
+			height: rem(5);
+			width: rem(50);
+			background-color: var(--gray-500);
+		} // -> after
+	} // -> title
+} // -> login

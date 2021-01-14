@@ -6,9 +6,11 @@
 // Location: @/assets/sass
 */
 
-@import "./core/settings",
-        "./core/colors",
-        "./core/mixins",
-        "./core/extends";
+@import "./core/settings";
+@import "./core/colors";
+@import "./core/mixins";
+@import "./core/extends";
 
 @import "./layout/global";
+@import "./components/form";
+@import "./components/buttons";

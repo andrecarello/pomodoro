@@ -1,7 +1,7 @@
 const sassDir = '@/assets/sass';
 
 export default {
-  ssr: true,
+	ssr: true,
 
 	// Global door
 	server: {
@@ -9,6 +9,7 @@ export default {
 		host: 'localhost' // default: localhost
 	},
 
+	// Vue config
 	vue: {
 		config: {
 			productionTip: true,
@@ -24,7 +25,14 @@ export default {
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 			{ hid: 'description', name: 'description', content: '' }
 		],
-		link: [ { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' } ]
+		link: [
+			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+			{ rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+			{
+				rel: 'stylesheet',
+				href: 'https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;400;800&display=swap'
+			}
+		]
 	},
 
 	// Global CSS (https://go.nuxtjs.dev/config-css)
@@ -33,15 +41,20 @@ export default {
 	styleResources: {
 		scss: [
 			sassDir + '/core/_settings.scss',
+			sassDir + '/core/_colors.scss',
 			sassDir + '/core/_functions.scss',
 			sassDir + '/core/_mixins.scss',
-      sassDir + '/layout/_display.scss',
-      sassDir + '/layout/_sizes.scss'
+			sassDir + '/layout/_display.scss',
+			sassDir + '/layout/_sizes.scss'
 		]
 	},
 
 	// Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-	plugins: [],
+	plugins: [
+		// https://vueformulate.com/guide/
+		'~/plugins/vue-formulate'
+		// '~/plugins/route'
+	],
 
 	// Auto import components (https://go.nuxtjs.dev/config-components)
 	components: true,
@@ -63,7 +76,9 @@ export default {
 	],
 
 	// Axios module configuration (https://go.nuxtjs.dev/config-axios)
-	axios: {},
+	axios: {
+		baseUrl: 'http://localhost:8080/'
+	},
 
 	// Content module configuration (https://go.nuxtjs.dev/config-content)
 	content: {},

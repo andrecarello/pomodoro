@@ -1,0 +1,37 @@
+//
+// Author: OSTON <ti@oston.io>
+// Name: Pomodoro
+// Description: Nuxt styles
+// File: buttons.scss
+// Location: @/assets/sass/components
+//
+
+%button {
+  @include display(inline-block);
+  padding: {
+    top: rem(12);
+    left: rem(24);
+    right: rem(24);
+    bottom: rem(12);
+  }
+  border-radius: rem(4);
+
+  line-height: 1.43;
+  font-size: rem(16);
+
+  border: rem(1) solid transparent;
+  outline: none!important;
+
+  @include color(white);
+}
+
+.button{
+  @extend %button;
+  @extend %clicable;
+
+  @each $name, $color in $colors {
+    &\:#{$name} {
+      background-color: $color;
+    }
+  }
+}
